@@ -48,7 +48,7 @@ client.on('interactionCreate', async interaction => {
     const pingvalue = client.ws.ping;
     const description = 'Latency: ' + pingvalue + ' ms' 
     const exampleEmbed = new EmbedBuilder()
-    .setColor(0x0099FF)
+    .setColor(0x000000)
     .setTitle('🏓 Pong!')
     .setDescription(description)
     
