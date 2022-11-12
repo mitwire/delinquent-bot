@@ -14,9 +14,13 @@ const commands = [
     },
     {
        name: 'coinflip',
-        description: 'Flip a coin'
+      description: 'Flip a coin'
     },
-];
+    {
+       name: 'help',
+      description: 'Get the list of commands'
+    },
+]; 
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
 
@@ -80,6 +84,16 @@ client.on('interactionCreate', async interaction => {
     .setTitle(result)
 
     await interaction.reply({ embeds: [exampleEmbed] });
+  }
+
+  if (interaction.commandName === 'help') {
+    const description = '</info:0>' + '\n' + '</ping:0>' + '\n' + '</coinflip:0>'
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle("Here's The List")
+    .setDescription(description)
+    
+    await interaction.reply({ embeds: [exampleEmbed] })
   }
 
 });
