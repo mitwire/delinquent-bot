@@ -7,6 +7,10 @@ const commands = [
         name: 'ping',
         description: 'Pong!',
     },
+    {
+      name: 'embed',
+      description: 'Embeded message!',
+  }
 ];
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
