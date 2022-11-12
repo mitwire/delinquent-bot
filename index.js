@@ -2,21 +2,17 @@ const { REST, Routes } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const TOKEN = "MTA0MDc5OTA0ODMwMDUwNzIzOA.GZndv_.C9u50r5xVEauau8vfNWzR65OFSjsnklBgnl2FA";
 const CLIENT_ID = "1040799048300507238"
-const { ActivityType } = require('discord.js')
-module.exports = {
-  name: 'ready',
-  once: true,
-  async execute(client) {
-    const options = [
-      {
-        type: ActivityType.Watching,
-        text: "cats",
-        status: "online"
-      }
-    ]
-  },
-};
 
+client.on("ready", () =>{
+  console.log(`Logged in as ${"barry is skeetless"}!`);
+  client.user.setPresence({
+      status: "online",  // You can show online, idle... Do not disturb is dnd
+      game: {
+          name: "!help",  // The message shown
+          type: "PLAYING" // PLAYING, WATCHING, LISTENING, STREAMING,
+      }
+  });
+});
 
 const commands = [
     {
