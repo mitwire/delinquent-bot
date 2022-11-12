@@ -34,7 +34,9 @@ client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'ping') {
-    await interaction.reply('🏓 Pong! Hosted on Heroku');
+    const pingvalue = client.ws.ping;
+    const replyMsg = '🏓 Pong! Hosted on Heroku' + '/n' + 'Latency: ' + pingvalue;
+    await interaction.reply(replyMsg);
   }
 });
 
