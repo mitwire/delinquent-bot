@@ -65,7 +65,7 @@ client.on('interactionCreate', async interaction => {
 
     //channel.send({ embeds: [exampleEmbed] });
     
-    await interaction.send({ embeds: [exampleEmbed] });
+    await interaction.reply(exampleEmbed);
     
 
   }
