@@ -57,14 +57,6 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] });
   }
 
-  if (interaction.commandName === 'info') {
-    const exampleEmbed = new EmbedBuilder()
-    const description = 'Made by mtwr#0006'
-    .setColor(0xf1e65d)
-    .setTitle('📜 Info')
-    .setDescription(description)
-  }
-
 });
 
 
