@@ -73,10 +73,13 @@ client.on('interactionCreate', async interaction => {
 
   if (interaction.commandName === 'coinflip') {
     const options = ["It's Heads","It's Tails"];
-    const result = options[Math.floor(Math.random()*options.length)];
+    const result = options[Math.floor(Math.random() * options.length)]
+                    
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle(result)
+
+    await interaction.reply({ embeds: [exampleEmbed] });
   }
 
 });
