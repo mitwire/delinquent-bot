@@ -3,6 +3,8 @@ const { EmbedBuilder } = require('discord.js');
 const TOKEN = "MTA0MDc5OTA0ODMwMDUwNzIzOA.GZndv_.C9u50r5xVEauau8vfNWzR65OFSjsnklBgnl2FA";
 const CLIENT_ID = "1040799048300507238"
 
+client.user.setActivity('cats', { type: `WATCHING`}).catch(console.error);
+
 const commands = [
     {
         name: 'ping',
