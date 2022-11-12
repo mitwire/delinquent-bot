@@ -47,12 +47,10 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'ping') {
     const pingvalue = client.ws.ping;
     const description = 'Latency: ' + pingvalue + 'ms' 
-    const footer = "Le Ping"
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle('🏓 Pong!')
     .setDescription(description)
-    .setFooter(footer)
     
     //channel.send({ embeds: [exampleEmbed] });
     
