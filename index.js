@@ -35,7 +35,7 @@ client.on('interactionCreate', async interaction => {
 
   if (interaction.commandName === 'ping') {
     const pingvalue = client.ws.ping;
-    const replyMsg = '🏓 Pong! Hosted on Heroku' + '\n' + 'Latency: ' + pingvalue + 'ms';
+    const replyMsg = 'Pong! Hosted on Heroku' + '\n' + 'Latency: ' + pingvalue + 'ms' + ' 🏓';
     await interaction.reply(replyMsg);
   }
 });
