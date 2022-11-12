@@ -51,6 +51,7 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle('🏓 Pong!')
     .setDescription(description)
+    .setFooter("Le Ping")
     
     //channel.send({ embeds: [exampleEmbed] });
     
