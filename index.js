@@ -37,14 +37,14 @@ client.on('ready', () => {
 
 client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
-
+/*
+ if (interaction.commandName === 'ping') {
+      const pingvalue = client.ws.ping;
+          const replyMsg = 'Pong! Hosted on Heroku' + '\n' + 'Latency: ' + pingvalue + 'ms' + ' 🏓';
+              await interaction.reply(replyMsg);
+ }
+*/
   if (interaction.commandName === 'ping') {
-    const pingvalue = client.ws.ping;
-    const replyMsg = 'Pong! Hosted on Heroku' + '\n' + 'Latency: ' + pingvalue + 'ms' + ' 🏓';
-    await interaction.reply(replyMsg);
-  }
-
-  if (interaction.commandName === 'embed') {
     
     const exampleEmbed = new EmbedBuilder()
     .setColor(0x0099FF)
