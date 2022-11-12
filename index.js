@@ -8,6 +8,10 @@ const commands = [
         name: 'ping',
         description: 'Pong!',
     },
+    {
+        name: 'info',
+        description: 'Some info about the bot',
+    },
 ];
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
