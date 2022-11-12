@@ -58,7 +58,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'info') {
-    const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a meme, entertaiment, and image bot' + '\n' + 'Find more about mtwr#0006 in his website' + "\n" + 'https://mitwire.com';
+    const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a meme, entertaiment, and image bot' + '\n' + 'Find more about mtwr in his website' + "\n" + 'https://mitwire.com';
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Delinquent's Info")
