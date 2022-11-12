@@ -44,8 +44,6 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'embed') {
-    if (!interaction.isChatInputCommand()) return;
-
     
     const exampleEmbed = new EmbedBuilder()
     .setColor(0x0099FF)
@@ -66,8 +64,8 @@ client.on('interactionCreate', async interaction => {
     .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
     //channel.send({ embeds: [exampleEmbed] });
-    interaction.send({ embeds: [exampleEmbed] });
-    //await interaction.send({ embeds: [exampleEmbed] });
+    
+    await interaction.send({ embeds: [exampleEmbed] });
     
 
   }
