@@ -23,7 +23,7 @@ const commands = [
     },
     {
        name: 'vote',
-       description: 'Vote for the bot on Top.gg'
+      description: 'Vote for the bot on Top.gg'
     },
 ]; 
 //comment
@@ -102,16 +102,6 @@ client.on('interactionCreate', async interaction => {
     .setDescription(description)
     
     await interaction.reply({ embeds: [exampleEmbed] })
-  }
-
-  if (interaction.commandName === 'vote') {
-    const description = 'Delinquent is currently in verification queue for Top.gg, Expect it to be on it in 1-2 weeks' + '\n' + '---------------------------'
-    const exampleEmbed = new EmbedBuilder()
-    .setColor(0xf1e65d)
-    .setTitle("Vote here")
-    .setDescription(description)
-
-    await interaction.reply({ embeds: [exambleEmbed] })
   }
 
 });
