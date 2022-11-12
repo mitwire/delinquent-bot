@@ -5,7 +5,7 @@ const CLIENT_ID = "1040799048300507238"
 const commands = [
     {
         name: 'ping',
-        description: 'Replies with Pong!',
+        description: 'Pong!',
     },
 ];
 //comment
