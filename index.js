@@ -46,11 +46,7 @@ client.on('interactionCreate', async interaction => {
   if (interaction.commandName === 'embed') {
     if (!interaction.isChatInputCommand()) return;
 
-    if (interaction.commandName === 'embed') {
-      
-      await interaction.reply('embed message');
-    }
-   /*
+    
     const exampleEmbed = new EmbedBuilder()
     .setColor(0x0099FF)
     .setTitle('Some title')
@@ -72,7 +68,7 @@ client.on('interactionCreate', async interaction => {
     //channel.send({ embeds: [exampleEmbed] });
 
     await interaction.reply({ embeds: [exampleEmbed] });
-    */
+    
 
   }
 
