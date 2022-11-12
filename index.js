@@ -57,16 +57,6 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] });
   }
 
- if (interaction.commandName === 'info') {
-  const description = 'Hello'
-  const exampleEmbed = new EmbedBuilder()
-  .setColor(0xf1e65d)
-  .setTitle('Epic')
-  .setDescription(description)
-
-  await interaction.reply({ rembeds: [exampleEmbed] });
- }
-
 });
 
 
