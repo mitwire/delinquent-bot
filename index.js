@@ -87,7 +87,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'help') {
-    const description = 'Information' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + 'Fun' + '\n' + '</coinflip:0>'
+    const description = '***Information***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List")
