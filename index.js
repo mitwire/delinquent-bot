@@ -66,8 +66,8 @@ client.on('interactionCreate', async interaction => {
     .setFooter({ text: 'Some footer text here', iconURL: 'https://i.imgur.com/AfFp7pu.png' });
 
     //channel.send({ embeds: [exampleEmbed] });
-
-    await interaction.reply({ embeds: [exampleEmbed] });
+    interaction.send({ embeds: [exampleEmbed] });
+    //await interaction.send({ embeds: [exampleEmbed] });
     
 
   }
