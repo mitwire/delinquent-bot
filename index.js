@@ -43,7 +43,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
-  client.user.setActivity(`cats`, { type: "WATCHING" })
+  client.user.setPresence({ activities: [{ name: 'activity' }], status: 'idle' });
 
 });
 
