@@ -72,7 +72,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'coinflip') {
-    const options = ["It's Heads","It's Tails"];
+    const options = ["It's Heads :coin:","It's Tails :coin:"];
     const result = options[Math.floor(Math.random() * options.length)]
                     
     const exampleEmbed = new EmbedBuilder()
