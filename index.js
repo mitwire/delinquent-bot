@@ -49,7 +49,7 @@ client.on('interactionCreate', async interaction => {
     const description = 'Latency: ' + pingvalue + ' ms' + ' 🏓'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0x0099FF)
-    .setTitle('Pong! Hosted on Heroku')
+    .setTitle('🏓 Pong!')
     .setDescription(description)
     
     //channel.send({ embeds: [exampleEmbed] });
