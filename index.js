@@ -3,8 +3,6 @@ const { EmbedBuilder } = require('discord.js');
 const TOKEN = "MTA0MDc5OTA0ODMwMDUwNzIzOA.GZndv_.C9u50r5xVEauau8vfNWzR65OFSjsnklBgnl2FA";
 const CLIENT_ID = "1040799048300507238"
 
-client.user.setActivity('cats', { type: `WATCHING` }).catch(console.error);
-
 const commands = [
     {
         name: 'ping',
@@ -60,13 +58,13 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'info') {
-    const description = 'Example'
+    const description = 'Example';
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Delinquent's Info")
     .setDescription(description)
 
-    await interaction.reply({ embeds: [exampleEmbed] })
+    await interaction.reply({ embeds: [exampleEmbed] });
   }
 
 });
