@@ -8,7 +8,7 @@ const commands = [
         description: 'Replies with Pong!',
     },
 ];
-
+//comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
 
 (async () => {
