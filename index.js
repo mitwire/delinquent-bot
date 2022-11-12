@@ -43,7 +43,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
-  client.user.setPresence({ activities: [{ name: '🤑🤙' }]});
+  client.user.setPresence({ activities: [{ name: '/help | trolling' }]});
 
 });
 
