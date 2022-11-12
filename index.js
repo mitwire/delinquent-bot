@@ -59,7 +59,19 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] });
   }
 
+  if (interaction.commandName === 'info') {
+    const description = 'Example'
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle("Delinquent's Info")
+    .setDescription(description)
+
+    await interaction.reply({ embeds: [exampleEmbed] })
+  }
+
 });
+
+
 
 
 client.login(TOKEN);
