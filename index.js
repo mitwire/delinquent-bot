@@ -21,6 +21,10 @@ const commands = [
        name: 'help',
       description: 'Get the list of commands'
     },
+    {
+       name: 'vote',
+       description: 'Vote for the bot on Top.gg'
+    },
 ]; 
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
@@ -98,6 +102,15 @@ client.on('interactionCreate', async interaction => {
     .setDescription(description)
     
     await interaction.reply({ embeds: [exampleEmbed] })
+  }
+
+  if (interaction.commandName === 'vote') {
+    const description = 'Delinquent is currently in verification queue for Top.gg, Expect it to be on it in 1-2 weeks' + '\n' + '---------------------------'
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setDescription(description)
+
+    await interaction.reply({ embeds: [exambleEmbed] })
   }
 
 });
