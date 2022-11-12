@@ -12,6 +12,10 @@ const commands = [
         name: 'info',
         description: 'Some info about the bot',
     },
+    {
+       name: 'coinflip',
+        description: 'Flip a coin'
+    },
 ];
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
@@ -65,6 +69,14 @@ client.on('interactionCreate', async interaction => {
     .setDescription(description)
 
     await interaction.reply({ embeds: [exampleEmbed] });
+  }
+
+  if (interaction.commandName === 'coinflip') {
+    const options = ["It's Heads","It's Tails"];
+    const result = options[Math.floor(Math.random()*options.length)];
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle(result)
   }
 
 });
