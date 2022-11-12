@@ -21,10 +21,6 @@ const commands = [
        name: 'help',
       description: 'Get the list of commands'
     },
-    {
-       name: 'vote',
-      description: 'Vote for the bot on Top.gg'
-    },
 ]; 
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
