@@ -34,7 +34,7 @@ client.on('interactionCreate', async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === 'ping') {
-    await interaction.reply('🏓 Pong! Hosted on Heroku <:heroku:1040908381466132490> ');
+    await interaction.reply('🏓 Pong! Hosted on Heroku');
   }
 });
 
