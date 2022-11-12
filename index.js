@@ -57,6 +57,10 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] });
   }
 
+ if (interaction.commandName === 'info') {
+   await interaction.reply('hello')
+ }
+
 });
 
 
