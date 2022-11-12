@@ -108,6 +108,7 @@ client.on('interactionCreate', async interaction => {
     const description = 'Delinquent is currently in verification queue for Top.gg, Expect it to be on it in 1-2 weeks' + '\n' + '---------------------------'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
+    .setTitle("Vote here")
     .setDescription(description)
 
     await interaction.reply({ embeds: [exambleEmbed] })
