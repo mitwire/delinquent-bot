@@ -149,7 +149,7 @@ client.on('interactionCreate', async interaction => {
     .setTitle(result)
     .setTimestamp()
 
-    await interaction.response.send_message(content=content, ephemeral=True )
+    await interaction.reply({ embeds: [exampleEmbed] })
 
 
   }
