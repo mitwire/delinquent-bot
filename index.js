@@ -144,18 +144,19 @@ client.on('interactionCreate', async interaction => {
 
   {
     if (interaction.commandName === 'avatar') {
-      const members=[];
+      const membersList='';
       const guild = client.guilds.cache.get('993824755889225768');
 
       guild.members.fetch().then(members =>
         {
-          console.log(members);
-          members = members;
+          
+          
             // Loop through every members
-          // members.forEach(member =>
-          //   {
-          //     // Do whatever you want with the current member
-          //   });
+          members.forEach(member =>
+            {
+              membersList = membersList + member.displayName + " "
+              // Do whatever you want with the current member
+            });
         });
       // const canvas = Canvas.createCanvas(700, 250);
 		  // const context = canvas.getContext('2d');
@@ -163,7 +164,7 @@ client.on('interactionCreate', async interaction => {
       // const exampleEmbed = new EmbedBuilder()
       // .setColor(0xf1e65d)
 
-      await interaction.reply(members);
+      await interaction.reply(membersList);
     }
 
 
