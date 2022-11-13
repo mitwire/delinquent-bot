@@ -156,44 +156,19 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
   }
 
-  //   if (interaction.commandName === 'avatar') {
-      
-  //     const user = interaction.options.getUser('@629358391877435412');
-  //     //const user = interaction.options.data[0].value
-  //     console.log(user);
-  //     // let membersList='';
-  //     // const guild = client.guilds.cache.get('993824755889225768');
-  //     // console.log('Printing guild')
-  //     // console.log(guild)
-  //     // guild.members
-  //     // guild.members.list().then(list=>{
-  //     //   console.log('print list');
-  //     //   console.log(list);
-  //     // })
+  
 
-  //     // guild.members.fetch().then(members =>
-  //     //   {
-          
-  //     //     console.log('print members');
-  //     //     //console.log(members);
-  //     //       // Loop through every members
-  //     //     members.forEach(member =>
-  //     //       {
-  //     //         membersList = membersList + member.displayName + " "
-  //     //         // Do whatever you want with the current member
-  //     //       });
-  //     //   });
-  //     //   console.log(membersList);
-  //     // const canvas = Canvas.createCanvas(700, 250);
-	// 	  // const context = canvas.getContext('2d');
-      
-  //     // const exampleEmbed = new EmbedBuilder()
-  //     // .setColor(0xf1e65d)
+  if (interaction.commandName === 'cat') {
+    const options = ["https://i.imgur.com/6Lt8z3K.png","https://i.imgur.com/9IutgB6.png"];
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle("Here's your cat")
+    .setThumbnail(result)
 
-  //     await interaction.reply('test');
-  //   }
-
-
+    await interaction.reply({ embeds: [exampleEmbed] })
+    
+  }
 
 
 
