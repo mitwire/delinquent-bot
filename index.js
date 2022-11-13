@@ -67,6 +67,10 @@ const commands = [
       name: 'capybara',
       description: 'See a cute Capybara'
     },
+    {
+      name: 'wyr',
+      description: 'Sends a would-you-rather question'
+    },
     
 ]; 
 //comment
@@ -286,6 +290,18 @@ client.on('interactionCreate', async interaction => {
 
       await interaction.reply({ embeds: [exampleEmbed] })
 
+  }
+
+  if (interaction.commandName === 'wyr') {
+    const options = ["Would you rather be a genius and know everything or be amazing at any activity you tried?","Would you rather dine alone or watch a good movie by yourself?","Would you rather end world hunger or stop crime all over the United States?","Would you rather wear pants 3 sizes too big or shoes 3 sizes too small?","Would you rather go into the past and meet your ancestors or go into the future and meet your great-great-grandchildren?","Would you rather lose your ability to speak or the ability to hear for your entire life?","Would you rather experience the world beginning or ending?","Would you rather have more money or more time?","Would you rather only be able to whisper or only be able to shout?","Would you rather work more hours a day, but have longer weekends or work fewer hours a day with more workdays?","Would rather have 100 duck-sized elephants or 1 elephant-sized duck?","Would you rather wear a clown wig or clown shoes every day?","Would you rather be insulted by Gordon Ramsay for 10 seconds or receive unlimited text messages from Donald Trump for 10 days?","Would you rather always have a mullet haircut or a ponytail haircut?","Would you rather be without elbows or knees?","Would you rather your only mode of transportation be a donkey or a giraffe?","Would you rather be a clown who distracts the bull or the cowboy who rides the bull?","Would you rather lose the ability to lie or believe everything youre told?","Would you rather lose all of the money you've earned this year or lose all of the memories you've gained this year?","Always hit a red light for the rest of your life or always get slow internet after the sun goes down?","Would you rather know how you will die or when you will die?","Would you rather ace a job interview at your dream job or go on a date with the hottest person you know","Would you rather know the world’s secrets or live ignorantly forever?","Would you rather speak to animals or know other people’s thoughts?","Would you rather live in a real haunted house or in the middle of a dessert?","Would you rather be the person who flips the switch during executions or be the judge who decides who should be executed?","Would you rather always have the urge to pee or have to always wear a diaper?","Would you rather have a rewind button or a pause button on your life?","Would you rather have an extra toe or extra finger?","Would you rather have good grades or be good at sports?"];
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle(result)
+    .setFooter("Sourced by quizbreaker.com")
+    .setTimestamp()
+
+    await interaction.reply({ embeds: [exampleEmbed] })
   }
 
 
