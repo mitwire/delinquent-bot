@@ -328,7 +328,17 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
   }
 
+  if (interaction.commandName === 'dadjoke') {
+    const options = ["I'm afraid for the calendar. Its days are numbered.","My wife said I should do lunges to stay in shape. That would be a big step forward.","Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",'"If April showers bring May flowers, what do May flowers bring?" "Pilgrims."','"Why do fathers take an extra pair of socks when they go golfing?" "In case they get a hole in one!"','"How do you follow Will Smith in the snow?" "You follow the fresh prints."','"What did the janitor say when he jumped out of the closet?" "Supplies!"','"Have you heard about the chocolate record player? It sounds pretty sweet."','"What did the ocean say to the beach?" "Nothing, it just waved."','"How does the moon cut his hair?" "Eclipse it."','"What did the zero say to the eight?" "That belt looks good on you."','"Where do fruits go on vacation?" "Pear-is!"','"What did Baby Corn say to Mama Corn?" "Wheres Pop Corn?"','"Whats the best thing about Switzerland?" "I dont know, but the flag is a big plus."','"What does a sprinter eat before a race?" "Nothing, they fast!"','"Where do you learn to make a banana split?" "Sundae school."','"What has more letters than the alphabet?" "The post office!"','"What do you call a poor Santa Claus?" "St. Nickel-less."'];
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder ()
+    .setColor(0xf1e65d)
+    .setTitle(result)
+    .setFooter({ text: 'Sourced by countryliving.com' })
+    .setTimestamp()
 
+    await interaction.reply({ embeds: [exampleEmbed] })
+  }
 
   // }
   // // if (interaction.commandName === 'blep') {
