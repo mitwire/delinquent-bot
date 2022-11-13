@@ -177,14 +177,12 @@ client.on('interactionCreate', async interaction => {
                     "https://i.imgur.com/ifTw4i0.png",
                     "https://i.imgur.com/g5f3a0u.png",
                     "https://i.imgur.com/l5MEjyH.png",
-                    "tenor.com/VdIKn05yIh8AAAPo/cat-sleep.mp4https://tenor.com/view/cat-sleep-gif-23970142",
-                    "https://tenor.com/view/cat-cute-burger-burger-cat-cat-burger-gif-25078813",
                     "https://i.imgur.com/ofoXS6Z.png",
                     "https://i.imgur.com/gwsyypL.png",
                     "https://i.imgur.com/uvJxM4p.png",
                     "https://i.imgur.com/1wcERx9.png",
                     "https://i.imgur.com/VpmH8cF.png",
-                    "https://tenor.com/view/thinking-cat-gif-23030201"];
+                    "https://i.imgur.com/1fcMybv.jpg"];
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
