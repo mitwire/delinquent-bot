@@ -109,7 +109,7 @@ client.on('interactionCreate', async interaction => {
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
-    .setTitle(result)
+    .setTitle('test')
 
     await interaction.reply({ emebeds: [exampleEmbed] });
   }
