@@ -144,15 +144,24 @@ client.on('interactionCreate', async interaction => {
 
   {
     if (interaction.commandName === 'avatar') {
-      
-      console.log(client.guilds['993824755889225768'].GuildMembers);
+      const members=[];
+      guild.members.fetch().then(members =>
+        {
+          console.log(members);
+          members = members;
+            // Loop through every members
+          // members.forEach(member =>
+          //   {
+          //     // Do whatever you want with the current member
+          //   });
+        });
       // const canvas = Canvas.createCanvas(700, 250);
 		  // const context = canvas.getContext('2d');
       
       // const exampleEmbed = new EmbedBuilder()
       // .setColor(0xf1e65d)
 
-      await interaction.reply('test');
+      await interaction.reply(members);
     }
 
 
