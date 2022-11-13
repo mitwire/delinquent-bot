@@ -144,7 +144,7 @@ client.on('interactionCreate', async interaction => {
 
   {
     if (interaction.commandName === 'avatar') {
-      const membersList='';
+      let membersList='';
       const guild = client.guilds.cache.get('993824755889225768');
 
       guild.members.fetch().then(members =>
