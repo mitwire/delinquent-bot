@@ -36,40 +36,8 @@ const commands = [
             
         }     
     ]
-    },
-    {
-      "name": "blep",
-      "type": 1,
-      "description": "Send a random adorable animal photo",
-      "options": [
-          {
-              "name": "animal",
-              "description": "The type of animal",
-              "type": 3,
-              "required": true,
-              "choices": [
-                  {
-                      "name": "Dog",
-                      "value": "animal_dog"
-                  },
-                  {
-                      "name": "Cat",
-                      "value": "animal_cat"
-                  },
-                  {
-                      "name": "Penguin",
-                      "value": "animal_penguin"
-                  }
-              ]
-          },
-          {
-              "name": "only_smol",
-              "description": "Whether to show only baby animals",
-              "type": 5,
-              "required": false
-          }
-      ]
-  }
+    }
+    
 ]; 
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
@@ -159,11 +127,11 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
     
   }
-  if (interaction.commandName === 'blep') {
+  // if (interaction.commandName === 'blep') {
     
-    //console.log(interaction.options.data[0].value);
-    await interaction.reply(interaction.options.data[0].value);
-  }
+  //   //console.log(interaction.options.data[0].value);
+  //   await interaction.reply(interaction.options.data[0].value);
+  // }
 
 
 });
