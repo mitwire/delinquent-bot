@@ -298,7 +298,7 @@ client.on('interactionCreate', async interaction => {
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle(result)
-    // .setFooter("Sourced by quizbreaker.com")
+    .setFooter("Sourced by quizbreaker.com")
     .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] })
