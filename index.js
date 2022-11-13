@@ -69,7 +69,7 @@ const rest = new REST({ version: '10' }).setToken(TOKEN);
 })();
 
 const { Client, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -145,7 +145,7 @@ client.on('interactionCreate', async interaction => {
   {
     if (interaction.commandName === 'avatar') {
       
-      console.log(client.guilds);
+      console.log(client.guilds['993824755889225768'].GuildMembers);
       // const canvas = Canvas.createCanvas(700, 250);
 		  // const context = canvas.getContext('2d');
       
