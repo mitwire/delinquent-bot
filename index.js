@@ -55,6 +55,10 @@ const commands = [
       name: 'vote',
       description: 'Vote for the bot on Top.gg'
     },
+    {
+      name: 'cat',
+      description: 'See a cute cat'
+    },
     
 ]; 
 //comment
