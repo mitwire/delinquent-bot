@@ -26,7 +26,16 @@ const commands = [
     },
     {
       name: '8ball',
-     description: 'Ask the 8ball a question'
+      description: 'Ask the 8ball a question',
+      "options": [
+        {
+            "name": "question",
+            "description": "Write your question here",
+            "type": 3,
+            "required": true,
+            
+        }     
+    ]
     },
     {
       "name": "blep",
