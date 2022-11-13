@@ -51,6 +51,10 @@ const commands = [
       }
     ]
     },
+    {
+      name: 'vote',
+      description: 'Vote for the bot on Top.gg'
+    },
     
 ]; 
 //comment
@@ -122,7 +126,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'help') {
-    const description = '***Information***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>'
+    const description = '***Information***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List")
@@ -142,41 +146,63 @@ client.on('interactionCreate', async interaction => {
     
   }
 
-  {
-    if (interaction.commandName === 'avatar') {
-      let membersList='';
-      const guild = client.guilds.cache.get('993824755889225768');
+  if (interaction.commandName === 'vote') {
+    const description = 'Delinquent is currently in the process of being added to Top.gg. It will be up there in about 1-2 weeks. Thank you for trying to support us on Top.gg lol.'
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle("Vote here on Top.gg!")
+    .setDescription(description)
 
-      guild.members.fetch().then(members =>
-        {
-          
-          
-            // Loop through every members
-          members.forEach(member =>
-            {
-              membersList = membersList + member.displayName + " "
-              // Do whatever you want with the current member
-            });
-        });
-      // const canvas = Canvas.createCanvas(700, 250);
-		  // const context = canvas.getContext('2d');
-      
-      // const exampleEmbed = new EmbedBuilder()
-      // .setColor(0xf1e65d)
-
-      await interaction.reply(membersList);
-    }
-
-
-
-
-
+    await interaction.reply({ embeds: [exampleEmbed] })
   }
-  // if (interaction.commandName === 'blep') {
-    
-  //   //console.log(interaction.options.data[0].value);
-  //   await interaction.reply(interaction.options.data[0].value);
+
+  //   if (interaction.commandName === 'avatar') {
+      
+  //     const user = interaction.options.getUser('@629358391877435412');
+  //     //const user = interaction.options.data[0].value
+  //     console.log(user);
+  //     // let membersList='';
+  //     // const guild = client.guilds.cache.get('993824755889225768');
+  //     // console.log('Printing guild')
+  //     // console.log(guild)
+  //     // guild.members
+  //     // guild.members.list().then(list=>{
+  //     //   console.log('print list');
+  //     //   console.log(list);
+  //     // })
+
+  //     // guild.members.fetch().then(members =>
+  //     //   {
+          
+  //     //     console.log('print members');
+  //     //     //console.log(members);
+  //     //       // Loop through every members
+  //     //     members.forEach(member =>
+  //     //       {
+  //     //         membersList = membersList + member.displayName + " "
+  //     //         // Do whatever you want with the current member
+  //     //       });
+  //     //   });
+  //     //   console.log(membersList);
+  //     // const canvas = Canvas.createCanvas(700, 250);
+	// 	  // const context = canvas.getContext('2d');
+      
+  //     // const exampleEmbed = new EmbedBuilder()
+  //     // .setColor(0xf1e65d)
+
+  //     await interaction.reply('test');
+  //   }
+
+
+
+
+
   // }
+  // // if (interaction.commandName === 'blep') {
+    
+  // //   //console.log(interaction.options.data[0].value);
+  // //   await interaction.reply(interaction.options.data[0].value);
+  // // }
 
 
 });
