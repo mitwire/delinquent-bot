@@ -57,11 +57,15 @@ const commands = [
     },
     {
       name: 'cat',
-      description: 'See a cute cat'
+      description: 'See a cute Cat'
     },
     {
       name: 'dog',
-      description: 'See a cute dog'
+      description: 'See a cute Dog'
+    },
+    {
+      name: 'capybara',
+      description: 'See a cute Capybara'
     },
     
 ]; 
@@ -245,6 +249,43 @@ client.on('interactionCreate', async interaction => {
     .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] })
+  }
+
+  if (interaction.commandName === 'capybara') {
+    const options = ["https://i.imgur.com/AQVM7Ie.jpg",
+                     "https://i.imgur.com/CYJS3mu.jpg",
+                     "https://i.imgur.com/zF0cHOC.jpg",
+                     "https://i.imgur.com/aLYBunk.jpg",
+                     "https://i.imgur.com/9Q1tZQE.jpg",
+                     "https://i.imgur.com/MI3nXy4.jpg",
+                     "https://i.imgur.com/x4ALoqw.jpg",
+                     "https://i.imgur.com/fDu2ISg.jpg",
+                     "https://i.imgur.com/SBoLuWv.jpg",
+                     "https://i.imgur.com/yBqjNcv.jpg",
+                     "https://i.imgur.com/2kGH3Et.jpg",
+                     "https://i.imgur.com/W7jPYNn.jpg",
+                     "https://i.imgur.com/qRnxgaP.jpg",
+                     "https://i.imgur.com/avk9g7l.jpg",
+                     "https://i.imgur.com/9K72KKT.jpg",
+                     "https://i.imgur.com/4gP7YWt.jpg",
+                     "https://i.imgur.com/hveIqo7.jpg",
+                     "https://i.imgur.com/qdIrV0R.jpg",
+                     "https://i.imgur.com/RNd5iH3.jpg",
+                     "https://i.imgur.com/3H6pEYc.jpg",
+                     "https://i.imgur.com/He2M80L.jpg",
+                     "https://i.imgur.com/LJfRG5y.jpg",
+                     "https://i.imgur.com/eFWc9Ft.jpg",
+                     "https://i.imgur.com/GmTBSi8.jpg",
+                     "https://i.imgur.com/v7MbrlQ.jpg"];
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle("Here's your capybara")
+    .setImage(result)
+    .setTimestamp()
+
+      await interaction.reply({ embeds: [exampleEmbed] })
+
   }
 
 
