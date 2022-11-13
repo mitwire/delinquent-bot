@@ -150,7 +150,7 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
   }
   if (interaction.commandName === 'blep') {
-    console.log(interaction.command.options);
+    
     console.log(interaction);
     await interaction.reply(JSON.stringify(interaction));
   }
