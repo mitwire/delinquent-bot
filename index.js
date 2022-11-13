@@ -146,11 +146,12 @@ client.on('interactionCreate', async interaction => {
     const description = '***Information***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0>' + '\n' + '</dog:0>' + '\n' + '</capybara:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
-    .setTitle("Here's The List")
+    .setTitle("Here's The List Of The Commands")
     .setDescription(description)
     .setTimestamp()
+    .ef
     
-    await interaction.reply({ embeds: [exampleEmbed] })
+    await interaction.reply({ embeds: [exampleEmbed] }, { content: 'Only you! :)', ephemeral: true })
   }
 
   if (interaction.commandName === '8ball') {
