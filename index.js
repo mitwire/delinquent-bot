@@ -150,7 +150,7 @@ client.on('interactionCreate', async interaction => {
     .setDescription(description)
     .setTimestamp()
     
-    await interaction.reply({ embeds: [exampleEmbed] }, {ephemeral: true} )
+    await interaction.reply({ embeds: [exampleEmbed], ephemeral: true } )
   }
 
   if (interaction.commandName === '8ball') {
