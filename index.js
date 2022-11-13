@@ -40,7 +40,16 @@ const commands = [
     },
     {
       name: 'avatar',
-      description: 'Get the avatar of someone'
+      description: 'Get the avatar of someone',
+      "options": [
+      {
+        "name": "user",
+        "description": "Pick the user",
+        "type": 3,
+        "required": true,
+        
+      }
+    ]
     },
     
 ]; 
@@ -141,8 +150,6 @@ client.on('interactionCreate', async interaction => {
       
       const exampleEmbed = new EmbedBuilder()
       .setColor(0xf1e65d)
-      .setTitle(context)
-      .setThumbnail(canvas)
 
       await interaction.reply({ embeds: [exampleEmbed] })
     }
