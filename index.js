@@ -76,10 +76,6 @@ const commands = [
       description: 'Sends a semi-funny joke'
     },
     {
-      name: 'dadjoke',
-      description: 'Sends a dadjoke'
-    },
-    {
       name: 'darkjoke',
       description: 'Sends a darkjoke'
     },
@@ -159,7 +155,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'help') {
-    const description = '***Utility***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '</wyr:0>' +  '\n' + '\n' + '***Jokes***' + '\n' + '</joke:0>' + '\n' + '</dadjoke:0>' + '\n' + '</darkjoke:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0>' + '\n' + '</dog:0>' + '\n' + '</capybara:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
+    const description = '***Utility***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '</joke:0>' + '</darkjoke:0>' + '</wyr:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0>' + '\n' + '</dog:0>' + '\n' + '</capybara:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List Of The Commands")
@@ -328,16 +324,17 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
   }
 
-  if (interaction.commandName === 'dadjoke') {
-    const options = ["I'm afraid for the calendar. Its days are numbered.","My wife said I should do lunges to stay in shape. That would be a big step forward.","Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.",'"If April showers bring May flowers, what do May flowers bring?" "Pilgrims."','"Why do fathers take an extra pair of socks when they go golfing?" "In case they get a hole in one!"','"How do you follow Will Smith in the snow?" "You follow the fresh prints."','"What did the janitor say when he jumped out of the closet?" "Supplies!"','"Have you heard about the chocolate record player? It sounds pretty sweet."','"What did the ocean say to the beach?" "Nothing, it just waved."','"How does the moon cut his hair?" "Eclipse it."','"What did the zero say to the eight?" "That belt looks good on you."','"Where do fruits go on vacation?" "Pear-is!"','"What did Baby Corn say to Mama Corn?" "Wheres Pop Corn?"','"Whats the best thing about Switzerland?" "I dont know, but the flag is a big plus."','"What does a sprinter eat before a race?" "Nothing, they fast!"','"Where do you learn to make a banana split?" "Sundae school."','"What has more letters than the alphabet?" "The post office!"','"What do you call a poor Santa Claus?" "St. Nickel-less."'];
+  if (interaction.commandName === 'darkjoke') {
+    const options = ["Never break someone’s heart, they only have one. Break their bones instead, they have 206 of them.","What does my dad have in common with Nemo? they cant be found","I have a fish that can breakdance! Only for 20 seconds, though, and only once.","When does a joke become a dad joke? When it leaves and never comes back.","My girlfriend, whos into astronomy, asked me how stars die. “Usually an overdose,” I told her.","I want to die peacefully in my sleep, just like my grandfather, Not screaming like the passengers in his car.","Why do orphans like playing tennis? Because its the only love they get.","Why do women always look skinny after a miscarriage? They dont lose their figure when they dont go full term.","I started crying when dad was cutting onions. Onions was such a good dog.","My parents raised me as an only child, which really pissed off my brother.","If at first, you dont succeed… then skydiving definitely isnt for you.","Ill never forget my Granddads last words to me just before he died. “Are you still holding the ladder?”","The doctor gave me one year to live, so I shot him. The judge gave me 15 years. Problem solved.","Where do you find a dog with no legs? Exactly where you left it.","Theres a lot of talk about starting families, but no one ever talks about finishing what they started.",""];
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
     .setTitle(result)
-    .setFooter({ text: 'Sourced by countryliving.com' })
-    .setTimestamp()
+    .setFooter({ text: 'Sourced by thecoolist.com' })
+    .setTimestamp(
 
-    await interaction.reply({ embeds: [exampleEmbed] })
+      await interaction.reply({ embeds: [exampleEmbed] })
+    )
   }
 
   // }
