@@ -108,7 +108,6 @@ client.on('interactionCreate', async interaction => {
     const options = ["I honestly dont know","Probably","Probably not","Most likely","Theres no shot","Possibly","Yeah","Nope","Not at all","Definetly"];
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder()
-
     .setColor(0xf1e65d)
     .setTitle(result)
 
