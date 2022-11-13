@@ -331,10 +331,9 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle(result)
     .setFooter({ text: 'Sourced by thecoolist.com' })
-    .setTimestamp(
+    .setTimestamp()
 
       await interaction.reply({ embeds: [exampleEmbed] })
-    )
   }
 
   // }
