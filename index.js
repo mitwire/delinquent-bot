@@ -102,6 +102,7 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle('🏓 Pong!')
     .setDescription(description)
+    .setTimestamp()
     
     //channel.send({ embeds: [exampleEmbed] });
     
@@ -114,6 +115,7 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle("Delinquent's Info")
     .setDescription(description)
+    .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] });
   }
@@ -125,6 +127,7 @@ client.on('interactionCreate', async interaction => {
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle(result)
+    .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] });
   }
@@ -135,6 +138,7 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle("Here's The List")
     .setDescription(description)
+    .setTimestamp()
     
     await interaction.reply({ embeds: [exampleEmbed] })
   }
@@ -145,6 +149,7 @@ client.on('interactionCreate', async interaction => {
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle(result)
+    .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] })
     
@@ -156,6 +161,7 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle("Vote here on Top.gg!")
     .setDescription(description)
+    .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] })
   }
@@ -169,6 +175,7 @@ client.on('interactionCreate', async interaction => {
     .setColor(0xf1e65d)
     .setTitle("Here's your cat")
     .setImage(result)
+    .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] })
     
