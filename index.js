@@ -1,7 +1,10 @@
 const { REST, Routes } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
+
 const TOKEN = "MTA0MDc5OTA0ODMwMDUwNzIzOA.GZndv_.C9u50r5xVEauau8vfNWzR65OFSjsnklBgnl2FA";
 const CLIENT_ID = "1040799048300507238"
+
 
 
 const commands = [
@@ -24,7 +27,40 @@ const commands = [
     {
       name: '8ball',
      description: 'Ask the 8ball a question'
-    }
+    },
+    {
+      "name": "blep",
+      "type": 1,
+      "description": "Send a random adorable animal photo",
+      "options": [
+          {
+              "name": "animal",
+              "description": "The type of animal",
+              "type": 3,
+              "required": true,
+              "choices": [
+                  {
+                      "name": "Dog",
+                      "value": "animal_dog"
+                  },
+                  {
+                      "name": "Cat",
+                      "value": "animal_cat"
+                  },
+                  {
+                      "name": "Penguin",
+                      "value": "animal_penguin"
+                  }
+              ]
+          },
+          {
+              "name": "only_smol",
+              "description": "Whether to show only baby animals",
+              "type": 5,
+              "required": false
+          }
+      ]
+  }
 ]; 
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
@@ -112,6 +148,11 @@ client.on('interactionCreate', async interaction => {
     .setTitle(result)
 
     await interaction.reply({ embeds: [exampleEmbed] })
+  }
+  if (interaction.commandName === 'blep') {
+    
+    console.log(interaction);
+    await interaction.reply(interaction);
   }
 
 
