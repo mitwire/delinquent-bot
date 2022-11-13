@@ -149,7 +149,6 @@ client.on('interactionCreate', async interaction => {
     .setTitle("Here's The List Of The Commands")
     .setDescription(description)
     .setTimestamp()
-    .ef
     
     await interaction.reply({ embeds: [exampleEmbed] }, { content: 'Only you! :)', ephemeral: true })
   }
