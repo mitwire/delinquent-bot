@@ -133,7 +133,9 @@ client.on('interactionCreate', async interaction => {
     .setTitle(result)
     .setTimestamp()
 
-    await interaction.reply({ embeds: [exampleEmbed] });
+    await interaction.response.send_message(content=content, ephemeral=True )
+
+
   }
 
   if (interaction.commandName === 'help') {
