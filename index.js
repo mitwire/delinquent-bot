@@ -182,7 +182,18 @@ client.on('interactionCreate', async interaction => {
                     "https://i.imgur.com/uvJxM4p.png",
                     "https://i.imgur.com/1wcERx9.png",
                     "https://i.imgur.com/VpmH8cF.png",
-                    "https://i.imgur.com/1fcMybv.jpg"];
+                    "https://i.imgur.com/1fcMybv.jpg",
+                    "https://i.imgur.com/RmlX44h.jpg",
+                    "https://i.imgur.com/fSfPHZP.jpg",
+                    "https://i.imgur.com/RCUxs46.png",
+                    "https://i.imgur.com/KxfsB5J.png",
+                    "https://i.imgur.com/fK0QVQG.png",
+                    "https://i.imgur.com/rHwrM35.png",
+                    "https://i.imgur.com/YjxyRHz.jpg",
+                    "https://i.imgur.com/YjxyRHz.jpg",
+                    "https://i.imgur.com/lzRevQZ.jpg",
+                    "https://i.imgur.com/lY3bDu2.jpg",
+                    "https://i.imgur.com/81trB44.jpg"];
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
