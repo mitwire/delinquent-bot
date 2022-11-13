@@ -59,6 +59,10 @@ const commands = [
       name: 'cat',
       description: 'See a cute cat'
     },
+    {
+      name: 'dog',
+      description: 'See a cute dog'
+    },
     
 ]; 
 //comment
@@ -203,6 +207,42 @@ client.on('interactionCreate', async interaction => {
 
     await interaction.reply({ embeds: [exampleEmbed] })
     
+  }
+
+  if (interaction.commandName === 'cat') {
+    const options = ["https://i.imgur.com/yBXiX1c.png",
+                     "https://i.imgur.com/fv2sPEj.jpg",
+                     "https://i.imgur.com/F7jl9NI.jpg",
+                     "https://i.imgur.com/tso4Mfi.jpg",
+                     "https://i.imgur.com/KMoeSKF.png",
+                     "https://i.imgur.com/q166x1r.jpg",
+                     "https://i.imgur.com/eWtkZr1.jpg",
+                     "https://i.imgur.com/tqXJgL9.jpg",
+                     "https://i.imgur.com/Eei0oqN.jpg",
+                     "https://i.imgur.com/TDFCNjv.jpg",
+                     "https://i.imgur.com/NIGM2tT.jpg",
+                     "https://i.imgur.com/PABFvIM.jpg",
+                     "https://i.imgur.com/T0uO2xO.jpg",
+                     "https://i.imgur.com/JXTSmOU.jpg",
+                     "https://i.imgur.com/BW3IzLU.jpg",
+                     "https://i.imgur.com/7b42DYw.jpg",
+                     "https://i.imgur.com/t41Qaya.jpg",
+                     "https://i.imgur.com/7fHuShO.jpg",
+                     "https://i.imgur.com/OOqlUF7.jpg",
+                     "https://i.imgur.com/E9T95R0.jpg",
+                     "https://i.imgur.com/QqX5fkq.png",
+                     "https://i.imgur.com/EXL9Nyy.jpg",
+                     "https://i.imgur.com/bqCoOaB.jpg",
+                     "https://i.imgur.com/XHSvKKY.jpg",
+                     "https://i.imgur.com/0Skf95V.jpg"];
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle("Here's your dog")
+    .setImage(result)
+    .setTimestamp()
+
+    await interaction.reply({ embeds: [exampleEmbed] })
   }
 
 
