@@ -209,7 +209,7 @@ client.on('interactionCreate', async interaction => {
     
   }
 
-  if (interaction.commandName === 'cat') {
+  if (interaction.commandName === 'dog') {
     const options = ["https://i.imgur.com/yBXiX1c.png",
                      "https://i.imgur.com/fv2sPEj.jpg",
                      "https://i.imgur.com/F7jl9NI.jpg",
