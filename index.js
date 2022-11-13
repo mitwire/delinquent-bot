@@ -169,7 +169,7 @@ client.on('interactionCreate', async interaction => {
   
 
   if (interaction.commandName === 'cat') {
-    const options = ["https://i.imgur.com/6Lt8z3K.png","https://i.imgur.com/9IutgB6.png"];
+    const options = ["https://i.imgur.com/6Lt8z3K.png","https://i.imgur.com/9IutgB6.png","https://i.imgur.com/mHpt7Di.png","https://i.imgur.com/KQyafHb.jpg","https://i.imgur.com/lLVcHpE.png","https://i.imgur.com/ifTw4i0.png","https://i.imgur.com/g5f3a0u.png","https://i.imgur.com/l5MEjyH.png","https://images-ext-1.discordapp.net/external/yuzxCaVBi1VlbmXBhvWtx7nk0w-Eq37ANqfGh20PRm8/https/media.tenor.com/VdIKn05yIh8AAAPo/cat-sleep.mp4https://tenor.com/view/cat-sleep-gif-23970142","https://tenor.com/view/cat-cute-burger-burger-cat-cat-burger-gif-25078813","https://i.imgur.com/ofoXS6Z.png","https://i.imgur.com/gwsyypL.png","https://i.imgur.com/uvJxM4p.png","https://i.imgur.com/1wcERx9.png","https://i.imgur.com/VpmH8cF.png"];
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
