@@ -151,7 +151,7 @@ client.on('interactionCreate', async interaction => {
   }
   if (interaction.commandName === 'blep') {
     
-    console.log(interaction.options);
+    console.log(interaction.options.data);
     await interaction.reply('test');
   }
 
