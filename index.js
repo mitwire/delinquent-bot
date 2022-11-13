@@ -35,8 +35,13 @@ const commands = [
             "required": true,
             
         }     
+      
     ]
-    }
+    },
+    {
+      name: 'avatar',
+      description: 'Get the avatar of someone'
+    },
     
 ]; 
 //comment
@@ -126,6 +131,26 @@ client.on('interactionCreate', async interaction => {
 
     await interaction.reply({ embeds: [exampleEmbed] })
     
+  }
+
+  {
+    if (interaction.commandName === 'avatar') {
+      
+      const canvas = Canvas.createCanvas(700, 250);
+		  const context = canvas.getContext('2d');
+      
+      const exampleEmbed = new EmbedBuilder()
+      .setColor(0xf1e65d)
+      .setTitle(context)
+      .setThumbnail(canvas)
+
+      await interaction.reply({ embeds: [exampleEmbed] })
+    }
+
+
+
+
+
   }
   // if (interaction.commandName === 'blep') {
     
