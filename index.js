@@ -150,17 +150,19 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === '8ball') {
-    const options = ["I honestly dont know","Probably","Probably not","Most likely","Theres no shot","Possibly","Yeah","Nope","Not at all","Definetly"];
-    const result = options[Math.floor(Math.random() * options.length)]
-    const exampleEmbed = new EmbedBuilder()
-    .setColor(0xf1e65d)
-    .setTitle(result)
+    // const options = ["I honestly dont know","Probably","Probably not","Most likely","Theres no shot","Possibly","Yeah","Nope","Not at all","Definetly"];
+    // const result = options[Math.floor(Math.random() * options.length)]
+    // const exampleEmbed = new EmbedBuilder()
+    // .setColor(0xf1e65d)
+    // .setTitle(result)
 
-    await interaction.reply({ embeds: [exampleEmbed] })
+    // await interaction.reply({ embeds: [exampleEmbed] })
+    
+    await interaction.reply(interaction.options.data[0].value);
   }
   if (interaction.commandName === 'blep') {
     
-    console.log(interaction.options.data[0].value);
+    //console.log(interaction.options.data[0].value);
     await interaction.reply(interaction.options.data[0].value);
   }
 
