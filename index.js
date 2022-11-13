@@ -21,6 +21,10 @@ const commands = [
        name: 'help',
       description: 'Get the list of commands'
     },
+    {
+       name: '8ball',
+       description: 'Ask the 8ball a question'
+    },
 ]; 
 //comment
 const rest = new REST({ version: '10' }).setToken(TOKEN);
@@ -98,6 +102,16 @@ client.on('interactionCreate', async interaction => {
     .setDescription(description)
     
     await interaction.reply({ embeds: [exampleEmbed] })
+  }
+
+  if (interaction.ocmmandName === '8ball') {
+    const options = ["Sure :8ball:","It's not happening :8ball","Maybe :8ball:","Yeah I dont know about that man","Yeah","I dont really know","Probably","Probably not","Possibly"];
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setTitle(result)
+
+    await interaction.reply({ exampleEmbed })
   }
 
 });
