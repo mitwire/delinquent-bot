@@ -47,7 +47,7 @@ const commands = [
         "description": "Pick the user",
         "type": 3,
         "required": true,
-        
+
       }
     ]
     },
@@ -145,13 +145,14 @@ client.on('interactionCreate', async interaction => {
   {
     if (interaction.commandName === 'avatar') {
       
-      const canvas = Canvas.createCanvas(700, 250);
-		  const context = canvas.getContext('2d');
+      console.log(client.guilds);
+      // const canvas = Canvas.createCanvas(700, 250);
+		  // const context = canvas.getContext('2d');
       
-      const exampleEmbed = new EmbedBuilder()
-      .setColor(0xf1e65d)
+      // const exampleEmbed = new EmbedBuilder()
+      // .setColor(0xf1e65d)
 
-      await interaction.reply({ embeds: [exampleEmbed] })
+      await interaction.reply('test');
     }
 
 
