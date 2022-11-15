@@ -80,12 +80,6 @@ const commands = [
       name: 'darkjoke',
       description: 'Sends a darkjoke'
     },
-    {
-      name: 'invite',
-      description: 'Invite the bot to another server'
-
-
-    },
     
 ]; 
 //comment
@@ -343,16 +337,6 @@ client.on('interactionCreate', async interaction => {
       await interaction.reply({ embeds: [exampleEmbed] })
   }
 
-  if (interaction.commandName === 'invite') {
-    const row = new ActionRowBuilder()
-    .addComponents(
-      new ButtonBuilder()
-        .setCustomId('primary')
-        .setLabel('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=964220546112&scope=bot%20applications.commands')
-        .setStyle(ButtonStyle.Primary)    );
-
-    await interaction.reply({ content: 'Click', components: [row] });
-  }
 
   // }
   // // if (interaction.commandName === 'blep') {
