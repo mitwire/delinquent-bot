@@ -348,10 +348,8 @@ client.on('interactionCreate', async interaction => {
     .addComponents(
       new ButtonBuilder()
         .setCustomId('primary')
-        .setLabel('Invite Here!')
-        .setStyle(ButtonStyle.Primary)
-        .setUrl('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=964220546112&scope=bot%20applications.commands')
-    );
+        .setLabel('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=964220546112&scope=bot%20applications.commands')
+        .setStyle(ButtonStyle.Primary)    );
 
     await interaction.reply({ content: 'Click', components: [row] });
   }
