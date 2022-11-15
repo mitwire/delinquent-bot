@@ -340,9 +340,9 @@ client.on('interactionCreate', async interaction => {
       await interaction.reply({ embeds: [exampleEmbed] })
   }
 
-  if (interaction.commandNanme === 'invite') {
+  if (interaction.commandName === 'invite') {
     const description = 'Invite Delinquent by clicking here!' + '\n' + 'https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=964220546112&scope=bot%20applications.commands'
-    const exampleEmbeds = new EmbedBuilder ()
+    const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
     .setTitle("Delinquent Bot")
     .setTimestamp()
