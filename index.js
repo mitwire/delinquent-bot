@@ -1,6 +1,7 @@
 const { REST, Routes } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const { SlashCommandBuilder } = require('discord.js');
+const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events } = require('discord.js');
 
 const TOKEN = "MTA0MDc5OTA0ODMwMDUwNzIzOA.GZndv_.C9u50r5xVEauau8vfNWzR65OFSjsnklBgnl2FA";
 const CLIENT_ID = "1040799048300507238"
@@ -82,6 +83,8 @@ const commands = [
     {
       name: 'invite',
       description: 'Invite the bot to another server'
+
+
     },
     
 ]; 
@@ -341,15 +344,15 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'invite') {
-    const description = 'Invite Delinquent by clicking here!' + '\n' + 'https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=964220546112&scope=bot%20applications.commands'
-    const exampleEmbed = new EmbedBuilder ()
-    .setColor(0xf1e65d)
-    .setTitle("Delinquent Bot")
-    .setDescription(description)
-    .setTimestamp()
+    const row = new ActionRowBuilder()
+    .addComponents(
+      new ButtonBuilder()
+        .setCustomId('primary')
+        .setLabel('Click me!')
+        .setStyle(ButtonStyle.Primary),
+    );
 
-    await interaction.reply({ embeds: [exampleEmbed] })
-    
+    await interaction.reply({ content: 'Click', components: [row] });
   }
 
   // }
