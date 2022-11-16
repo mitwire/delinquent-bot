@@ -118,8 +118,7 @@ client.on('interactionCreate', async interaction => {
 */
   if (interaction.commandName === 'ping') {
     const pingvalue = client.ws.ping;
-    const herokuemoji = client.emojis.cache.get("1040908381466132490");
-    const description = 'Bot Latency: ' + pingvalue + 'ms' + "\n" + "Hosted on Heroku" + herokuemoji
+    const description = 'Bot Latency: ' + pingvalue + 'ms' + "\n" + "Hosted on Heroku"
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle('🏓 Pong!')
