@@ -342,13 +342,21 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'invite') {
+    const row = new ActionRowBuilder()
+			.addComponents(
+				new ButtonBuilder()
+					.setCustomId('primary')
+					.setLabel('Click me!')
+					.setStyle(ButtonStyle.Primary),
+			); 
     const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
     .setTitle('Invite Delinquent')
     .setTimestamp()
     .addFields({ name: 'Inline field title', value: 'Some value here', inline: true })
+    
 
-      await interaction.reply({ embeds: [exampleEmbed] })
+      await interaction.reply({ embeds: [exampleEmbed], components: [row] })
   }
 
 
