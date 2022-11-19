@@ -345,14 +345,13 @@ client.on('interactionCreate', async interaction => {
     const row = new ActionRowBuilder()
 			.addComponents(
 				new ButtonBuilder()
-					.setLabel('Click me!')
+					.setLabel('Invite Me!')
 					.setStyle(ButtonStyle.Link)
           .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands')
 			); 
     const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
     .setTitle('Invite Delinquent')
-    .setTimestamp()
 
       await interaction.reply({ embeds: [exampleEmbed], components: [row] })
   }
