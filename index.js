@@ -345,10 +345,9 @@ client.on('interactionCreate', async interaction => {
     const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
     .setTitle('Invite Delinquent')
-    .setTimestamp(
+    .setTimestamp()
 
       await interaction.reply({ embeds: [exampleEmbed] })
-    )
   }
 
 
