@@ -160,7 +160,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'help') {
-    const description = '***Utility***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</invite:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '</joke:0>' + '\n' + '</darkjoke:0>' + '\n' + '</wyr:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0>' + '\n' + '</dog:0>' + '\n' + '</capybara:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
+    const description = '***Utility***' + '\n' + '</help:0> - (All of Delinquents commands)' + '\n' + '</info:0> - (Info about Delinquent)' + '\n' + '</invite:0> - (Invite Delinquent to another server)' + '\n' + '</ping:0> - (Check the ping of the bot)' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0> - (Flip a coin)' + '\n' + '</8ball:0> - (Ask the 8ball a question)' + '\n' + '</joke:0> - (Get a semi-funny joke)' + '\n' + '</darkjoke:0> - (Get a dark joke)' + '\n' + '</wyr:0> - (Get a would-you-rather question)' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0> - (Find a cute cat)' + '\n' + '</dog:0> - (Find a cute dog)' + '\n' + '</capybara:0> - (Find a cute capybara)' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0> - (Vote for the bot on Top.gg)'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List Of The Commands")
