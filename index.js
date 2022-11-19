@@ -342,6 +342,13 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'invite') {
+    const row = new ActionRowBuilder()
+    .addComponents(
+      new ButtonBuilder()
+        .setCustomId('primary')
+        .setLabel('Click me!')
+        .setStyle(ButtonStyle.Primary),
+    );
     const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
     .setTitle('Invite Delinquent')
