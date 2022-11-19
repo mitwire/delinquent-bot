@@ -1,4 +1,4 @@
-const { REST, Routes } = require('discord.js');
+const { REST, Routes, Embed } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const { SlashCommandBuilder } = require('discord.js');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events } = require('discord.js');
@@ -80,6 +80,10 @@ const commands = [
       name: 'darkjoke',
       description: 'Sends a darkjoke'
     },
+    {
+      name: 'invite',
+      description: 'Invite Delinquent to your server!'
+    },
     
 ]; 
 //comment
@@ -156,7 +160,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'help') {
-    const description = '***Utility***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '</joke:0>' + '\n' + '</darkjoke:0>' + '\n' + '</wyr:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0>' + '\n' + '</dog:0>' + '\n' + '</capybara:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
+    const description = '***Utility***' + '\n' + '</help:0>' + '\n' + '</info:0>' + '\n' + '</invite' + '\n' + '</ping:0>' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0>' + '\n' + '</8ball:0>' + '\n' + '</joke:0>' + '\n' + '</darkjoke:0>' + '\n' + '</wyr:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0>' + '\n' + '</dog:0>' + '\n' + '</capybara:0>' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0>'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List Of The Commands")
@@ -335,6 +339,16 @@ client.on('interactionCreate', async interaction => {
     .setTimestamp()
 
       await interaction.reply({ embeds: [exampleEmbed] })
+  }
+
+  if (interaction.commandName === 'invite') {
+    const exampleEmbed = new EmbedBuilder ()
+    .setColor(0xf1e65d)
+    .setTitle('Invite Delinquent')
+    .setTimestamp(
+
+      await interaction.reply({ embeds: [exampleEmbed] })
+    )
   }
 
 
