@@ -136,15 +136,16 @@ client.on('interactionCreate', async interaction => {
 
   if (interaction.commandName === 'info') {
     const row = new ActionRowBuilder()
-    .addComponents
-    new ButtonBuilder()
-    .setLabel('Invite Me!')
-    .setStyle(ButtonStyle.Link)
-    .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands'),
-    new ButtonBuilder()
-    .setLabel('Support Server')
-    .setStyle(ButtonStyle.Link)
-    .setURL('https://discord.gg/ht6HyC3jW3')
+    .addComponents(
+      new ButtonBuilder()
+        .setLabel('Invite Me!')
+        .setStyle(ButtonStyle.Link)
+        .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands'),
+        new ButtonBuilder()
+        .setLabel('Support Server')
+        .setStyle(ButtonStyle.Link)
+        .setURL('https://discord.gg/ht6HyC3jW3')
+    ); 
     const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a multipurpose bot with meme, entertaiment, and image bot commands' + '\n' + 'Find more about mtwr in his website' + "\n" + 'https://mitwire.com';
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
