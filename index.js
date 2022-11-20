@@ -193,7 +193,7 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === '8ball') {
-    const options = ["I honestly dont know","Probably","100% percent yes","Probably not","Most likely","Theres no shot","Possibly","Yeah","Nope","Not at all","Definetly"];
+    const options = ["I honestly dont know","Probably","100% percent yes","Probably not","Most likely","Theres no shot","Possibly","Yeah","Nope","Not at all","Definetly","I dont get it","I dont think so","Yeah, I dont think so","Yessir"];
     const result = options[Math.floor(Math.random() * options.length)]
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
