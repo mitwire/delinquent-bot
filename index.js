@@ -84,10 +84,6 @@ const commands = [
       name: 'invite',
       description: 'Invite Delinquent to your server!'
     },
-    {
-      name: 'devlog',
-      description: 'devlog'
-    },
 
 ]; 
 //comment
@@ -382,15 +378,6 @@ client.on('interactionCreate', async interaction => {
       await interaction.reply({ embeds: [exampleEmbed], components: [row] })
   }
 
-  if (interaction.commandName === 'devlog') {
-    const description = "Stable version has been released! (1.0)" + '\n' + 'With a support server, invite command, and multiple commands with buttons!'
-    const exampleEmbed = new EmbedBuilder()
-    .setColor(0xf1e65d)
-    .setTitle("Update")
-    .setDescription(description)
-
-    await interaction.reply({ embeds: [exampleEmbed] })
-  }
 
 
   // }
