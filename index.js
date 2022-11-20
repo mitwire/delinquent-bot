@@ -153,7 +153,7 @@ client.on('interactionCreate', async interaction => {
     .setDescription(description)
     .setTimestamp()
 
-    await interaction.reply({ embeds: [exampleEmbed], compones: [row] });
+    await interaction.reply({ embeds: [exampleEmbed], components: [row] });
   }
 
   if (interaction.commandName === 'coinflip') {
