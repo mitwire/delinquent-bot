@@ -166,12 +166,10 @@ client.on('interactionCreate', async interaction => {
         .setLabel('Invite Me!')
         .setStyle(ButtonStyle.Link)
         .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands'),
-
-        new ActionRowBuilder
-        .addComponents
+        new ButtonBuilder()
         .setLabel('Support Server')
         .setStyle(ButtonStyle.Link)
-        .setURL("https://discord.gg/ht6HyC3jW3")
+        .setURL('https://discord.gg/ht6HyC3jW3')
     ); 
     const description = '***Utility***' + '\n' + '</help:0> - All of Delinquents commands' + '\n' + '</info:0> - Info about Delinquent' + '\n' + '</invite:0> - Invite Delinquent to another server' + '\n' + '</ping:0> - Check the ping of the bot' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0> - Flip a coin' + '\n' + '</8ball:0> - Ask the 8ball a question' + '\n' + '</joke:0> - Get a semi-funny joke' + '\n' + '</darkjoke:0> - Get a dark joke' + '\n' + '</wyr:0> - Get a would-you-rather question' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0> - Find a cute cat' + '\n' + '</dog:0> - Find a cute dog' + '\n' + '</capybara:0> - Find a cute capybara' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0> - Vote for the bot on Top.gg'
     const exampleEmbed = new EmbedBuilder()
