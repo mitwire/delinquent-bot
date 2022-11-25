@@ -39,19 +39,19 @@ const commands = [
       
     ]
     },
-    {
-      name: 'avatar',
-      description: 'Get the avatar of someone',
-      "options": [
-      {
-        "name": "user",
-        "description": "Pick the user",
-        "type": 3,
-        "required": true,
+    // {
+    //   name: 'avatar',
+    //   description: 'Get the avatar of someone',
+    //   "options": [
+    //   {
+    //     "name": "user",
+    //     "description": "Pick the user",
+    //     "type": 3,
+    //     "required": true,
 
-      }
-    ]
-    },
+    //   }
+    // ]
+    // },
     {
       name: 'vote',
       description: 'Vote for the bot on Top.gg'
