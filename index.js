@@ -140,7 +140,7 @@ client.on('interactionCreate', async interaction => {
       new ButtonBuilder()
         .setLabel('Invite Me!')
         .setStyle(ButtonStyle.Link)
-        .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands'),
+        .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=414467870272&scope=bot%20applications.commands'),
         new ButtonBuilder()
         .setLabel('Support Server')
         .setStyle(ButtonStyle.Link)
@@ -176,7 +176,7 @@ client.on('interactionCreate', async interaction => {
       new ButtonBuilder()
         .setLabel('Invite Me!')
         .setStyle(ButtonStyle.Link)
-        .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands'),
+        .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=414467870272&scope=bot%20applications.commands'),
         new ButtonBuilder()
         .setLabel('Support Server')
         .setStyle(ButtonStyle.Link)
@@ -369,7 +369,7 @@ client.on('interactionCreate', async interaction => {
 				new ButtonBuilder()
 					.setLabel('Invite Me!')
 					.setStyle(ButtonStyle.Link)
-          .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=bot%20applications.commands'),
+          .setURL('https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=414467870272&scope=bot%20applications.commands'),
 			); 
     const exampleEmbed = new EmbedBuilder ()
     .setColor(0xf1e65d)
