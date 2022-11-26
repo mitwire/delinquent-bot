@@ -208,13 +208,13 @@ client.on('interactionCreate', async interaction => {
     const row = new ActionRowBuilder()
     .addComponents(
       new ButtonBuilder()
-        .setLabel('Vote!')
+        .setLabel('Vote')
         .setStyle(ButtonStyle.Link)
         .setURL('https://top.gg/bot/1040799048300507238/vote'),
     ); 
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
-    .setTitle("Vote here on Top.gg!")
+    .setTitle("Vote here on Top.gg")
     .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed], components: [row] })
