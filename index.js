@@ -84,6 +84,14 @@ const commands = [
       name: 'invite',
       description: 'Invite Delinquent to your server!'
     },
+    {
+      name: 'meme',
+      description: 'Get a kinda funny meme'
+    },
+    {
+      name: 'dankmeme',
+      description: 'Get a meme thats dank'
+    }
 
 ]; 
 //comment
@@ -381,6 +389,36 @@ client.on('interactionCreate', async interaction => {
     .setTitle('Invite Delinquent')
 
       await interaction.reply({ embeds: [exampleEmbed], components: [row] })
+  }
+
+  if (interaction.commandName === 'dankmeme') {
+    const options = ["https://i.imgur.com/9o2tMq1.jpg",
+                     "https://i.imgur.com/mf6Qrzf.jpg",
+                     "https://i.imgur.com/zk8MMPT.jpg",
+                     "https://i.imgur.com/FMAFbIN.jpg",
+                     "https://i.imgur.com/HaHDP5h.jpg",
+                     "https://i.imgur.com/9Ihzh4G.jpg",
+                     "https://i.imgur.com/xzJdjqk.jpg",
+                     "https://i.imgur.com/ZUMCZiM.jpg",
+                     "https://i.imgur.com/lTcYRQW.jpg",
+                     "https://i.imgur.com/s5K7sbr.png",
+                     "https://i.imgur.com/Jx7PKTk.jpg",
+                     "https://i.imgur.com/TVJNCDc.jpg",
+                     "https://i.imgur.com/lWiF4wa.jpg",
+                     "https://i.imgur.com/MHBoqCO.jpg",
+                     "https://i.imgur.com/4TRBgZu.jpg",
+                     "https://i.imgur.com/pfuxhmZ.png",
+                     "https://i.imgur.com/U3MVLNd.jpg",
+                     "https://i.imgur.com/Im0FrRE.jpg",
+                     "https://i.imgur.com/09CEOMy.jpg",
+                     "https://i.imgur.com/C1xhSPI.jpg"]
+    const result = options[Math.floor(Math.random() * options.length)]
+    const exampleEmbed = new EmbedBuilder()
+    .setColor(0xf1e65d)
+    .setImage(result)
+    .setTimestamp()
+
+    await interaction.reply({ embeds: [exampleEmbed] })
   }
 
 
