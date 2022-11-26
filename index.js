@@ -217,7 +217,7 @@ client.on('interactionCreate', async interaction => {
     .setTitle("Vote here on Top.gg!")
     .setTimestamp()
 
-    await interaction.reply({ embeds: [exampleEmbed] })
+    await interaction.reply({ embeds: [exampleEmbed], components: [row] })
   }
 
   
