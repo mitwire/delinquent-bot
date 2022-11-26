@@ -86,12 +86,8 @@ const commands = [
     },
     {
       name: 'meme',
-      description: 'Get a kinda funny meme'
+      description: 'Get a funny meme'
     },
-    {
-      name: 'dankmeme',
-      description: 'Get a meme thats dank'
-    }
 
 ]; 
 //comment
@@ -190,7 +186,7 @@ client.on('interactionCreate', async interaction => {
         .setStyle(ButtonStyle.Link)
         .setURL('https://discord.gg/ht6HyC3jW3')
     ); 
-    const description = '***Utility***' + '\n' + '</info:0> - Info about Delinquent' + '\n' + '</invite:0> - Invite Delinquent to another server' + '\n' + '</ping:0> - Check the ping of the bot' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0> - Flip a coin' + '\n' + '</8ball:0> - Ask the 8ball a question' + '\n' + '</joke:0> - Get a semi-funny joke' + '\n' + '</darkjoke:0> - Get a dark joke' + '\n' + '</wyr:0> - Get a would-you-rather question' + '\n' + '\n' + '***Memes***' + '\n' + "</meme:0>" + '\n' + '</dankmeme:0>' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0> - Find a cute cat' + '\n' + '</dog:0> - Find a cute dog' + '\n' + '</capybara:0> - Find a cute capybara' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0> - Vote for the bot on Top.gg'
+    const description = '***Utility***' + '\n' + '</info:0> - Info about Delinquent' + '\n' + '</invite:0> - Invite Delinquent to another server' + '\n' + '</ping:0> - Check the ping of the bot' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0> - Flip a coin' + '\n' + '</8ball:0> - Ask the 8ball a question' + '\n' + '</joke:0> - Get a semi-funny joke' + '\n' + '</darkjoke:0> - Get a dark joke' + '\n' + '</wyr:0> - Get a would-you-rather question' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0> - Find a cute cat' + '\n' + '</dog:0> - Find a cute dog' + '\n' + '</capybara:0> - Find a cute capybara' + '\n' + '</meme:0> - Get a funny meme' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0> - Vote for the bot on Top.gg'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List Of The Commands")
@@ -391,7 +387,7 @@ client.on('interactionCreate', async interaction => {
       await interaction.reply({ embeds: [exampleEmbed], components: [row] })
   }
 
-  if (interaction.commandName === 'dankmeme') {
+  if (interaction.commandName === 'meme') {
     const options = ["https://i.imgur.com/9o2tMq1.jpg",
                      "https://i.imgur.com/mf6Qrzf.jpg",
                      "https://i.imgur.com/zk8MMPT.jpg",
