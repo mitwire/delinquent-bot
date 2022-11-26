@@ -88,10 +88,10 @@ const commands = [
       name: 'meme',
       description: 'Get a funny meme'
     },
-    {
-      name: 'devlog',
-      description: 'dev'
-    },
+    // {
+    //   name: 'devlog',
+    //   description: 'dev'
+    // },
 
 ]; 
 //comment
@@ -421,16 +421,16 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
   }
 
-  if (interaction.commandName === 'devlog') {
-    const description = "Stable version has been released! (1.1)" + '\n' + "Added a meme command, added buttons tocommands, and also got added to Top.gg "
-    const exampleEmbed = new EmbedBuilder()
-    .setColor(0xf1e65d)
-    .setTitle("Update")
-    .setDescription(description)
+  // if (interaction.commandName === 'devlog') {
+  //   const description = "Stable version has been released! (1.2)" + '\n' + "Added a meme command, added buttons tocommands, and also got added to Top.gg "
+  //   const exampleEmbed = new EmbedBuilder()
+  //   .setColor(0xf1e65d)
+  //   .setTitle("Update")
+  //   .setDescription(description)
 
-    await interaction.reply({ embeds: [exampleEmbed] })
+  //   await interaction.reply({ embeds: [exampleEmbed] })
     
-  }
+  // }
 
 
 
