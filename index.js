@@ -205,11 +205,16 @@ client.on('interactionCreate', async interaction => {
   }
 
   if (interaction.commandName === 'vote') {
-    const description = 'Delinquent is currently in the process of being added to Top.gg. It will be up there in about 1-2 weeks. Thank you for trying to support us on Top.gg lol.'
+    const row = new ActionRowBuilder()
+    .addComponents(
+      new ButtonBuilder()
+        .setLabel('Vote!')
+        .setStyle(ButtonStyle.Link)
+        .setURL('https://top.gg/bot/1040799048300507238/vote'),
+    ); 
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Vote here on Top.gg!")
-    .setDescription(description)
     .setTimestamp()
 
     await interaction.reply({ embeds: [exampleEmbed] })
