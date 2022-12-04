@@ -1,10 +1,11 @@
+require('dotenv').load();
 const { REST, Routes, Embed, userMention } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const { SlashCommandBuilder } = require('discord.js');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events } = require('discord.js');
 
-const TOKEN = "MTA0MDc5OTA0ODMwMDUwNzIzOA.GZndv_.C9u50r5xVEauau8vfNWzR65OFSjsnklBgnl2FA";
-const CLIENT_ID = "1040799048300507238"
+const TOKEN = process.env.TOKEN;
+const CLIENT_ID = process.env.CLIENT_ID;
 
 
 
