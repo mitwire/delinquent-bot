@@ -4,6 +4,7 @@ const { EmbedBuilder } = require('discord.js');
 const { SlashCommandBuilder } = require('discord.js');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle, Events } = require('discord.js');
 
+
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 
@@ -89,10 +90,11 @@ const commands = [
       name: 'meme',
       description: 'Get a funny meme'
     },
-    // {
-    //   name: 'devlog',
-    //   description: 'dev'
-    // },
+
+     {
+       name: 'changelog',
+      description: 'Get a log of all recent changes made on Delinquent'
+     },
 
 ]; 
 //comment
@@ -131,7 +133,7 @@ client.on('interactionCreate', async interaction => {
 */
   if (interaction.commandName === 'ping') {
     const pingvalue = client.ws.ping;
-    const description = 'Bot Latency: ' + pingvalue + 'ms' + "\n" + "Hosted on Heroku"
+    const description = 'Bot Latency:' + pingvalue + 'ms' + "\n" + "Hosted Locally"
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle('🏓 Pong!')
@@ -155,7 +157,7 @@ client.on('interactionCreate', async interaction => {
         .setStyle(ButtonStyle.Link)
         .setURL('https://discord.gg/ht6HyC3jW3')
     ); 
-    const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a multipurpose bot with meme, entertaiment, and image bot commands' + '\n' + 'Find more about mtwr in his website' + "\n" + 'https://mitwire.com';
+    const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a multipurpose bot with meme, entertaiment, and image commands' + '\n' + 'Find more about mtwr in his website' + "\n" + 'https://mitwire.com';
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Delinquent's Info")
@@ -191,7 +193,7 @@ client.on('interactionCreate', async interaction => {
         .setStyle(ButtonStyle.Link)
         .setURL('https://discord.gg/ht6HyC3jW3')
     ); 
-    const description = '***Utility***' + '\n' + '</info:0> - Info about Delinquent' + '\n' + '</invite:0> - Invite Delinquent to another server' + '\n' + '</ping:0> - Check the ping of the bot' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0> - Flip a coin' + '\n' + '</8ball:0> - Ask the 8ball a question' + '\n' + '</joke:0> - Get a semi-funny joke' + '\n' + '</darkjoke:0> - Get a dark joke' + '\n' + '</wyr:0> - Get a would-you-rather question' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0> - Find a cute cat' + '\n' + '</dog:0> - Find a cute dog' + '\n' + '</capybara:0> - Find a cute capybara' + '\n' + '</meme:0> - Get a funny meme' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0> - Vote for the bot on Top.gg'
+    const description = '***Utility***' + '\n' + '</info:0> - Info about Delinquent' + '\n' + '</invite:0> - Invite Delinquent to another server' + '\n' + '</ping:0> - Check the ping of the bot' + '\n' + '\n' + '***Fun***' + '\n' + '</coinflip:0> - Flip a coin' + '\n' + '</8ball:0> - Ask the 8ball a question' + '\n' + '</joke:0> - Get a semi-funny joke' + '\n' + '</darkjoke:0> - Get a dark joke' + '\n' + '</wyr:0> - Get a would-you-rather question' + '\n' + '\n' + '***Images***' + '\n' + '</cat:0> - Find a cute cat' + '\n' + '</dog:0> - Find a cute dog' + '\n' + '</capybara:0> - Find a cute capybara' + '\n' + '</meme:0> - Get a funny meme' + '\n' + '\n' + '***Miscellaneous***' + '\n' + '</vote:0> - Vote for the bot on Top.gg' + '\n' + '</changelog:0> - Get a log of all a recent changes made to Delinquent'
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Here's The List Of The Commands")
@@ -392,6 +394,7 @@ client.on('interactionCreate', async interaction => {
       await interaction.reply({ embeds: [exampleEmbed], components: [row] })
   }
 
+
   if (interaction.commandName === 'meme') {
     const options = ["https://i.imgur.com/9o2tMq1.jpg",
                      "https://i.imgur.com/mf6Qrzf.jpg",
@@ -422,16 +425,18 @@ client.on('interactionCreate', async interaction => {
     await interaction.reply({ embeds: [exampleEmbed] })
   }
 
-  // if (interaction.commandName === 'devlog') {
-  //   const description = "Stable version has been released! (1.2)" + '\n' + "Added a meme command, added buttons tocommands, and also got added to Top.gg "
-  //   const exampleEmbed = new EmbedBuilder()
-  //   .setColor(0xf1e65d)
-  //   .setTitle("Update")
-  //   .setDescription(description)
+   if (interaction.commandName === 'changelog') {
+     const description = "Stable version has been released (1.2)" + '\n' + "• Added a meme command" + '\n' + "• Added buttons to multiple commands" + '\n' + "• Delinquent also got added to Top.gg"
+     const exampleEmbed = new EmbedBuilder()
+     .setColor(0xf1e65d)
+     .setTitle("Changelog")
+     .setDescription(description)
 
-  //   await interaction.reply({ embeds: [exampleEmbed] })
+     await interaction.reply({ embeds: [exampleEmbed] })
     
-  // }
+  }
+
+
 
 
 
