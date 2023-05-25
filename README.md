@@ -18,4 +18,4 @@ Command  | What it does
 `/changelog` | Get a log of all the recent changes made to Delinquent
 
 # Liscense #
-The Delinquent Bot is under the license of the [GNU General Public Lisence 3.0](#liscese)
+The Delinquent Bot is under the license of the [GNU General Public Lisence v3.0](#liscese)
