@@ -157,7 +157,7 @@ client.on('interactionCreate', async interaction => {
         .setStyle(ButtonStyle.Link)
         .setURL('https://discord.gg/ht6HyC3jW3')
     ); 
-    const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a multipurpose bot with meme, entertaiment, and image commands' + '\n' + 'Find more about mtwr in his website' + "\n" + 'https://mitwire.com';
+    const description = 'Delinquent is made by mtwr#0006' + '\n' + 'Its a multipurpose bot with entertaiment, and image commands' + '\n' + 'Find more about mtwr in his website' + "\n" + 'https://mitwire.com';
     const exampleEmbed = new EmbedBuilder()
     .setColor(0xf1e65d)
     .setTitle("Delinquent's Info")
