@@ -1,6 +1,6 @@
 🤖 Delinquent - A Multipurpose Discord Bot 🤖
 ---------------------------------------------
-#### Delinquent is a open source general purpose Discord bot with commands such as: ####
+#### Delinquent is an open source general purpose Discord bot with commands such as: ####
 Command  | What it does
 ------------- | -------------
 /ping | Fetches the ping of the bot
