@@ -20,4 +20,4 @@ Command  | What it does
 
 Liscense
 ---------------
-Delinquent Bot is under the license of the [GNU General Public Lisence](#liscese)
+Delinquent Bot is under the license of the [GNU General Public Lisence 3.0](#liscese)
