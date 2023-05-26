@@ -6,11 +6,14 @@
   <br>
 </h1>
 
-Delinquent is an multipurpose open source Discord bot built with discord.js. Delinquent has multiple features like:
+## Overview ##
+[Delinquent](https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=applications.commands%20bot) is an multipurpose open source Discord bot built with discord.js. Delinquent has multiple features like:
 + Image Commands
 + Utility Commands
 + Joke Commands
 + Game Commands
+
+You can invite Delinquent to your server using [this link](https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=applications.commands%20bot)
 ## Commands ## 
 Delinquent has commands such as:
 Command  | What it does
