@@ -1,5 +1,7 @@
 <h1 align='center'>
   <br>
+  <img src="https://i.imgur.com/LNLPbJK.png" </a>
+  <br>
    🤖 Delinquent - A Multipurpose Discord Bot 🤖 
   <br>
 </h1>
