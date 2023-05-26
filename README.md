@@ -1,5 +1,16 @@
-# 🤖 Delinquent - A Multipurpose Discord Bot 🤖 #
-Delinquent is an open source general purpose Discord bot with commands such as:
+<h1 align='center'>
+  <br>
+   🤖 Delinquent - A Multipurpose Discord Bot 🤖 
+  <br>
+</h1>
+
+Delinquent is an multipurpose open source Discord bot built with discord.js. Delinquent has multiple features like:
++ Image Commands
++ Utility Commands
++ Joke Commands
++ Game Commands
+## Commands ## 
+Delinquent has commands such as:
 Command  | What it does
 ------------- | -------------
 `/ping` | Fetches the ping of the bot
@@ -17,5 +28,5 @@ Command  | What it does
 `/meme` | Get a totally hillarious meme
 `/changelog` | Get a log of all the recent changes made to Delinquent
 
-# Liscense #
+## Liscense ##
 The Delinquent Bot is under the license of the [GNU General Public Lisence v3.0](#liscese)
