@@ -17,7 +17,7 @@
 You can invite Delinquent to your server using [this link](https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=applications.commands%20bot)
 ## Commands ## 
 Delinquent has commands such as:
-Command  | What it does
+Command  | What the command will do
 ------------- | -------------
 `/ping` | Fetches the ping of the bot
 `/info` | Grabs info about the bot
