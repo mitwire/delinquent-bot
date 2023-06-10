@@ -8,7 +8,7 @@
  
 
 ## Overview ##
-[Delinquent](https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=applications.commands%20bot) is an multipurpose open source Discord bot built with discord.js. Delinquent has multiple features like:
+[Delinquent](https://discord.com/api/oauth2/authorize?client_id=1040799048300507238&permissions=8&scope=applications.commands%20bot) is an multipurpose open source Discord bot built with [discord.js](https://discord.js.org/). Delinquent has multiple features like:
 + Image Commands
 + Utility Commands
 + Joke Commands
